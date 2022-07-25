@@ -124,7 +124,7 @@ export default function ProductPup(props) {
             value={pro_price ? pro_price : modelData?.pro_price}
             onChange={(e) => setPro_price(e.target.value)}
           />
-         
+        
           <TextField
             autoFocus
             margin="dense"
@@ -147,6 +147,7 @@ export default function ProductPup(props) {
             value={pro_img ? pro_img: modelData?.pro_img}
             onChange={(e) => setPro_img(e.target.value)}
           />
+          
         
         </DialogContent>
         <DialogActions>

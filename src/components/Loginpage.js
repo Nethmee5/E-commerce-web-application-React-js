@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import './Styles/login.css';
 import Alert from "@mui/material/Alert";
 import { Hidden } from "@mui/material";
+import Home from "./Home";
 
 //flow
 function Loginpage() {
@@ -19,7 +20,7 @@ function Loginpage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     console.log("btnNameClicked",e);
-    if(e=='loginevent'){
+    //if(e=='loginevent'){
    
       // 2.enter krpu data tik validate krnw
       //1 username eki password eki harid  , hari nm mn mokkd krnne : if{} eke, wardinm mn mokkd krnne :  else{} eke
@@ -33,18 +34,17 @@ function Loginpage() {
         setAlt({ serverity: "error", text: "Login unSuccesfull" });
   
       }
-    }else{ if(password==confirmpassword){
+    }/*else{ if(password==confirmpassword){
       setAlt({serverity:"success" ,text:"Registration successfull"});
     }
     else{
       setAlt({ serverity: "error", text: "Registration  unSuccesfull" });
     }
-   }
-    };
+   }*/
+    
   
   //function for usrname validate
   function Validate(val) {
-    //var username = "Nethmee@gmail.com";
     //1 Nethmee     ,    @gmail.com
     const myArray = val.split("@"); // ['abc','gmail.com']
     function onlyLettersAndNumbers(str) {
@@ -138,7 +138,9 @@ function Loginpage() {
             id="btn-login"
             type="submit"
             onClick={(e) => {
-              handleLogin(openRegister==true?"regevent":"loginevent");
+               handleLogin(e);
+            
+              // handleLogin(openRegister==true?"regevent":"loginevent");
             }}
             variant="contained"
           >
